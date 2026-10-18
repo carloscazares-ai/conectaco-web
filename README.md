@@ -77,18 +77,19 @@ Ejemplo de body para el POST (Body → raw → JSON):
 ### Ramas
 | Rama | Para qué |
 |---|---|
-| `main` | Solo lo que ya se entregó y funciona |
-| `dev` | Donde se junta el trabajo de todos |
+| `dev` | **La rama principal.** Aquí se junta el trabajo de todos y es lo que se entrega |
 | `tu-nombre` | Tu rama personal; aquí trabajas tú |
 
-**Nadie hace push directo a `dev` ni a `main`.** Todo entra a `dev` con un Pull Request.
+No hay rama `main`: **`dev` es la principal**.
+
+**`dev` está protegida: nadie puede hacer push directo.** Todo entra a `dev` con un Pull Request, y otra persona del equipo (no quien lo abrió) tiene que aprobarlo antes del merge.
 
 ### Antes de empezar a trabajar (cada vez)
 1. Cámbiate a tu rama (abajo a la derecha en IntelliJ, el nombre de la rama → tu rama → **Checkout**).
 2. Trae lo último de `dev`: en el menú de ramas, clic en `origin/dev` → **Merge 'origin/dev' into tu-rama**. Así no se te acumulan conflictos.
 3. Si cambió `database/conectaco.sql`, vuelve a correr el script.
 
-La primera vez, crea tu rama: menú de ramas → **New Branch** → ponle tu nombre → luego **Git → Push**.
+La primera vez: tu rama ya existe en GitHub. Haz **Git → Fetch** y luego, en el menú de ramas, `origin/tu-nombre` → **Checkout**.
 
 ### Cuando terminas algo
 1. **Git → Commit**: selecciona tus archivos, escribe qué hiciste (ej. "Se creo Lugar: entity, dto, mapper, repository, service y controller") y dale **Commit and Push**.
